@@ -53,16 +53,20 @@ void movercavalo(int cavalo){
     movercavalo(cavalo - 1);                          //Chama a função novamente com o valor de cavalo - 1
     for (int linha = 1, coluna = 1; linha <= 1 && coluna  <= 1; linha++) //For - Loop Externo
 
-    while(coluna <= 1 || coluna == 2){//Loop Interno  //While - Loop Interno
-        printf("Cima, ");                              //Executa 2 vezes e se torna falso
-        coluna++;                                     //Incrementa o valor da coluna
-        }
+    while(coluna >= 1 ){//Loop Interno       //While - Loop Interno
+        printf("Cima,");
+        coluna++;  
+        if(coluna == 3){                    //Executa 2 vezes e se torna falso
+            break;                          //Encerra o loop assim que coluna é igual a 3 
+        }  
+        }                                 
+       
         printf("Direita: %d vezes.\n", cavalo);       //Executa 1 vezes após o cima e se torna falso
+        printf("\n");
 
         }
-
- 
     } 
+
 
 
 int main(){
